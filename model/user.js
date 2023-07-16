@@ -9,6 +9,7 @@ const userSchema = new mongoose.Schema({
     lastName: { type: String },
     companyName: { type: String },
     address: { type: String },
+    token : { type: String },
   },
 });
 
