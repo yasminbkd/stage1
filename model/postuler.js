@@ -29,6 +29,10 @@ const internshipApplicationSchema = new mongoose.Schema({
     data: Buffer,
     contentType: String,
   },
+  stageTitle: { // Nouveau champ pour le titre du stage
+    type: String,
+    required: true,
+  },
 });
 
 const InternshipApplication = mongoose.model('InternshipApplication', internshipApplicationSchema);

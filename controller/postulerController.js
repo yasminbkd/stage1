@@ -2,7 +2,7 @@ const InternshipApplication = require('../model/postuler');
 
 exports.submitInternshipApplication = async (req, res) => {
   try {
-    const { name, email, phoneNumber, faculty, internshipDuration, message } = req.body;
+    const { name, email, phoneNumber, faculty, internshipDuration, message, stageTitle } = req.body;
 
     // Create a new InternshipApplication instance
     const internshipApplication = new InternshipApplication({
@@ -12,6 +12,7 @@ exports.submitInternshipApplication = async (req, res) => {
       faculty,
       internshipDuration,
       message,
+      stageTitle,
       cv: {
         data: req.file.buffer,
         contentType: req.file.mimetype,
